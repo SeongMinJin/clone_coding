@@ -9,4 +9,5 @@ function getCurrentTime() {
   clock.innerText = `${hours} : ${minutes} : ${seconds}`;
 }
 
+getCurrentTime();
 setInterval(getCurrentTime, 1000);

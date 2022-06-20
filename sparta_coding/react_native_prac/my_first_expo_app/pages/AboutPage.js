@@ -1,7 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 
-export default function AboutPage() {
+export default function AboutPage({ navigation }) {
+  useEffect(() => {
+    navigation.setOptions({
+      title: '소개 페이지',
+      headerStyle: {
+        backgroundColor: 'pink',
+        shadowColor: "#000",
+        borderBottomColor: "pink",
+      },
+      headerTintColor: "#fff",
+    })
+  }, [])
+
   return (
     <View style={styles.container}>
       <View style={styles.title}>
@@ -31,7 +43,7 @@ const styles = StyleSheet.create({
     padding: 50,
     backgroundColor: "pink",
   },
-  titles: {
+  title: {
     flex: 2
   },
   titleText: {
